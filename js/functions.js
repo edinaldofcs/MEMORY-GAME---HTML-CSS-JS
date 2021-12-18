@@ -58,10 +58,8 @@ function flipcard(clicked_id) {
 
 
     if (num == 1 || num == 2) {
-        setTimeout(() => {
-            flip.style.opacity = "0%";//Mostrar a imagem atrás do card
-        }, 100);
 
+            flip.style.opacity = "0%";//Mostrar a imagem atrás do card
 
         //Criando validação da classe para definir se as cartas foram viradas corretamente.
         if (el.classList.contains(zero[0])) {
@@ -78,9 +76,9 @@ function flipcard(clicked_id) {
         }
 
     } else if (num == 3 || num == 4) {
-        setTimeout(() => {
+
             flip.style.opacity = "0%";//Mostrar a imagem atrás do card
-        }, 100);
+
 
         //Criando validação da classe para definir se as cartas foram viradas corretamente.
         if (el.classList.contains(zero[1])) {
@@ -96,9 +94,8 @@ function flipcard(clicked_id) {
             //alert("two2");
         }
     } else if (num == 5 || num == 6) {
-        setTimeout(() => {
+
             flip.style.opacity = "0%";//Mostrar a imagem atrás do card
-        }, 100);
 
         //Criando validação da classe para definir se as cartas foram viradas corretamente.
         if (el.classList.contains(zero[2])) {
@@ -114,9 +111,8 @@ function flipcard(clicked_id) {
             //alert("two2");
         }
     } else if (num == 7 || num == 8) {
-        setTimeout(() => {
+
             flip.style.opacity = "0%";//Mostrar a imagem atrás do card
-        }, 100);
 
         //Criando validação da classe para definir se as cartas foram viradas corretamente.
         if (el.classList.contains(zero[3])) {
