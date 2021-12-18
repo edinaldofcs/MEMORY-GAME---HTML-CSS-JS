@@ -156,4 +156,7 @@
 	.settings{
 		display: flex;
 	} 
+	#victory p{
+		font-size: 30px;
+	}
 }
