@@ -1,0 +1,159 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	justify-content: center;
+	
+}
+
+/*Variáveis de imagens*/
+:root{
+	--flip: url("../images/flip.png");
+	--img1: url("../images/img1.png");
+	--img2: url("../images/img2.png");
+	--img3: url("../images/img3.png");
+	--img4: url("../images/img4.png");	
+}
+
+/*Título*/
+.title{
+	position: absolute;
+	top: 20px;
+	font-size: 50px;
+	color: black;	
+	width: 100vw;
+	text-align: center;
+	animation: barra;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+/*Título - Animação*/
+@keyframes barra {
+	0% {color: black;}
+	50% {color: rgb(102, 51, 51);}
+	100% {color: rgb(15, 40, 121);}
+}
+
+/*Container*/
+#container{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(255, 255, 255);
+	display: flex; 	
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}   
+
+
+/*Cards - Status inicial e para desvirar ao errar*/   
+#cards1, #cards2, #cards3, #cards4, #cards5, #cards6, #cards7, #cards8{
+	height: 20vh;
+	width: 20vh;
+	background-image: var(--flip);
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 10px 5px gray;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 15px;
+	opacity: 100%;
+	/*background-image: var(--flip);*/	
+}
+
+/*Cards - Virar*/
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8{
+	transition: 1s;	
+	border-radius: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/*Cards - add imagens*/
+.img1, .img2{
+	background-image: var(--img1);
+}
+
+/*Cards - add imagens*/
+.img3, .img4{
+	background-image: var(--img2);
+}
+
+/*Cards - add imagens*/
+.img5, .img6{
+	background-image: var(--img3);
+}
+
+/*Cards - add imagens*/
+.img7, .img8{
+	background-image: var(--img4);
+}
+
+/*Esconder div id=score*/
+#score{
+	display: none;
+}
+
+/*Esconder Modal de fim de jogo*/
+#victory{
+	width: 70vw;
+	height: 70vh;
+	background-color: white;
+	box-shadow: 0 0 10px 5px gray;
+	position: absolute;
+	display: none;
+	opacity: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*Estilizar Mensagem*/
+#victory p{
+	margin: 0 auto;
+	font-size: 120px;
+	color: green;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+/*Estilizar botão de fechar modal*/
+.circle{	
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 40px;
+	background-color: red;
+	position: relative;
+	float: right;
+	transform: translate(50%, -50%);
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+/*Responsivo*/
+@media screen and (max-width: 500px) {
+	.title{
+		font-size: 16px;
+	}
+	#cards1, #cards2, #cards3, #cards4, #cards5, #cards6, #cards7, #cards8{
+		transition: 2s;
+		height: 18vh;
+		width: 18vh;
+		margin: 10px;
+	} 
+
+	#container{
+		display: block;
+		padding-top: 50px;
+	}
+	.settings{
+		display: flex;
+	} 
+}

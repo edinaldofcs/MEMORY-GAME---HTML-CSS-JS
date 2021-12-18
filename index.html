@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR"">
+
+<head>
+    <title>MEMORY GAME - HTML,CSS,JS</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>    
+
+    <div id="container">
+        
+        <span class="title">MEMORY GAME</span><!--Título-->
+        
+
+        <div id="9" class="zero zero2 zero3 zero4"></div><!--Validação dos cards virados -->
+
+        <div id="score">0</div><!--Contagem dos acertos para criar regras de fim de jogo-->
+
+        <div id="victory"><!--Modal final-->
+            <div class="circle" onClick="victory();">x</div><!--Botão para fechar o modal-->
+            <p>victory!!</p>
+        </div>
+
+        <!--OS CARDS SERÃO ADICIONADOS COM O JAVASCRIPT-->
+
+    </div>
+
+    <script src="./js/functions.js"></script>
+</body>
+
+</html>
